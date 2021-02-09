@@ -1,9 +1,10 @@
+function RandomPlanet({planet}) {
 
-
-function RandomPlanet(props) {
   return (
-    <div>
-      <h1>Random Planet</h1>
+    <div key={planet.id}>
+      <h3>{planet.name}</h3>
+      <p>Moons: {planet.num_moons}</p>
+      <p>Color: {planet.color}</p>
     </div>
   )
 }

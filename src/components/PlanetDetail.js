@@ -1,9 +1,13 @@
 function PlanetDetail(props) {
+
+  const {...planet} = props.location.state.planet
   return (
-    <div>
-      <h1>
-        Planet Detail
-      </h1>
+    <div key={planet.id}>
+      <h3>{planet.name}</h3>
+      <p>Moons: {planet.num_moons}</p>
+      <p>Color: {planet.color}</p>
     </div>
   )
 }
+
+export default PlanetDetail;
